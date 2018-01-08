@@ -9,6 +9,7 @@ module Cielo
     # @attr [String] city the city of customer's address
     # @attr [String] state the state of customer's address
     # @attr [String] country the country of customer's address
+    # @attr [String] district the district of customer's address
     class Address
       attr_accessor :street,
                     :number,
@@ -16,7 +17,8 @@ module Cielo
                     :zip_code,
                     :city,
                     :state,
-                    :country
+                    :country,
+                    :district
 
       def to_json(*options)
         hash = as_json(*options)
@@ -35,6 +37,7 @@ module Cielo
         address.city = data["City"]
         address.state = data["State"]
         address.country = data["Country"]
+        address.district = data["District"]
         address
       end
 
@@ -46,7 +49,8 @@ module Cielo
           ZipCode: @zip_code,
           City: @city,
           State: @state,
-          Country: @country
+          Country: @country,
+          District: @district
         }
       end
     end
