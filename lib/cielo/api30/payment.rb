@@ -41,11 +41,11 @@ module Cielo
                     :links,
                     :extra_data_collection,
                     :expiration_date,
-                    :boleto_number
-                    :assignor
-                    :demonstrative
-                    :identification
-                    :instructions
+                    :boleto_number,
+                    :assignor,
+                    :demonstrative,
+                    :identification,
+                    :instructions,
                     :url,
                     :number,
                     :bar_code_number,
