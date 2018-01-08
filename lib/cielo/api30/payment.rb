@@ -41,6 +41,11 @@ module Cielo
                     :links,
                     :extra_data_collection,
                     :expiration_date,
+                    :boleto_number
+                    :assignor
+                    :demonstrative
+                    :identification
+                    :instructions
                     :url,
                     :number,
                     :bar_code_number,
@@ -93,6 +98,11 @@ module Cielo
         payment.extra_data_collection = data["ExtraDataCollection"]
 
         payment.expiration_date = data["ExpirationDate"]
+        payment.boleto_number = data["BoletoNumber"]
+        payment.assignor = data["Assignor"]
+        payment.demonstrative = data["Demonstrative"]
+        payment.identification = data["Identification"]
+        payment.instructions = data["Instructions"]
         payment.url = data["Url"]
         payment.number = data["Number"]
         payment.bar_code_number = data["BarCodeNumber"]
